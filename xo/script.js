@@ -31,6 +31,7 @@ cell.forEach(cel=>{
         if(staus == "" || staus == "o")
         {
             event.target.textContent = "x";
+            event.target.style.backgroundColor = ' rgb(21, 240, 21)';
             staus = "x";
 
             let xo = {
@@ -39,7 +40,8 @@ cell.forEach(cel=>{
             };
             ws.send(JSON.stringify(xo))
         }else{
-            event.target.textContent = "o";
+            event.target.textContent = "o"; 
+            event.target.style.backgroundColor = ' rgb(245, 7, 7)';
             staus = "o";
             let xo = {
                 "field":event.target.id,
